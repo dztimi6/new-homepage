@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+
+  <body>
+    <main class="news-page">
+      <!-- Header -->
+      <div class="header">
+        <img src="./assets/images/logo.svg" alt="logo-img" class="logo" />
+        <img
+          src="./assets/images/icon-menu.svg"
+          alt="Navigation open button"
+          id="nav-open-btn"
+        />
+        <div class="nav-bar">
+          <ul>
+            <li><a href="#" class="nav-link p-text">Home</a></li>
+            <li><a href="#" class="nav-link p-text">New</a></li>
+            <li><a href="#" class="nav-link p-text">Popular</a></li>
+            <li><a href="#" class="nav-link p-text">Trending</a></li>
+            <li><a href="#" class="nav-link p-text">Categories</a></li>
+          </ul>
+          <img
+            src="./assets/images/icon-menu-close.svg"
+            alt="Navigation close button"
+            id="nav-close-btn"
+          />
+        </div>
+      </div>
+      <div class="news-grid">
+        <!-- Main Image -->
+        <picture class="grid-col-span-2 news main-img">
+          <source
+            media="(max-width: 33rem)"
+            srcset="./assets/images/image-web-3-mobile.jpg"
+          />
+          <img src="./assets/images/image-web-3-desktop.jpg" alt="web-3-img" />
+        </picture>
+        <!-- Main Headline -->
+        <div class="big-headline news">
+          <h1>The Bright Future of Web 3.0?</h1>
+        </div>
+        <!-- Article -->
+        <div class="write-up news">
+          <p class="p-text">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <button class="btn">READ MORE</button>
+        </div>
+        <!-- Side News -->
+        <div class="side-news news">
+          <h2>New</h2>
+          <h3>Hydrogen VS Electric Cars</h3>
+          <p class="p-text">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          <hr />
+          <h3>The Downsides of AI Artistry</h3>
+          <p class="p-text">
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+          <hr />
+          <h3>Is VC Funding Drying Up?</h3>
+          <p class="p-text">
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </div>
+        <!-- Related News -->
+        <div class="flex news">
+          <div class="flex-img">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="retro-img" />
+          </div>
+          <div class="flex-text">
+            <h2 class="digit">01</h2>
+            <h3 class="sub-heading">Reviving Retro PCs</h3>
+            <p class="p-text">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </div>
+        <div class="flex news">
+          <div class="flex-img">
+            <img src="./assets/images/image-top-laptops.jpg" alt="laptop-img" />
+          </div>
+          <div class="flex-text">
+            <h2 class="digit">02</h2>
+            <h3 class="sub-heading">Top 10 Laptops of 2022</h3>
+            <p class="p-text">Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+        <div class="flex news">
+          <div class="flex-img">
+            <img
+              src="./assets/images/image-gaming-growth.jpg"
+              alt="gaming-img"
+            />
+          </div>
+          <div class="flex-text">
+            <h2 class="digit">03</h2>
+            <h3 class="sub-heading">The Growth of Gaming</h3>
+            <p class="p-text">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

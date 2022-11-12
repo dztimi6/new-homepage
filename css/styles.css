@@ -1,0 +1,294 @@
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+  --ff: "Inter", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--off-white);
+  font-family: var(--ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* align-content: center; */
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  line-height: 0;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+}
+
+li,
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 1px solid var(--dark-grayish-blue);
+}
+
+h1 {
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 0.75rem;
+}
+
+.news-page {
+  width: min(60%, 70rem);
+}
+
+.news-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "main-img main-img side-news"
+    "big-headline write-up side-news"
+    "flex-1 flex-2 flex-3";
+}
+
+.news:nth-child(1) {
+  grid-area: main-img;
+}
+
+.news:nth-child(2) {
+  grid-area: big-headline;
+}
+
+.news:nth-child(3) {
+  grid-area: write-up;
+}
+
+.news:nth-child(4) {
+  grid-area: side-news;
+  padding: 1.25rem 1.25rem 0;
+}
+
+.news:nth-child(5) {
+  grid-area: flex-1;
+}
+
+.news:nth-child(6) {
+  grid-area: flex-2;
+}
+
+.news:nth-child(7) {
+  grid-area: flex-3;
+}
+
+.header {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+/* Navigation */
+
+#nav-open-btn,
+#nav-close-btn {
+  display: none;
+}
+
+.nav-link {
+  font-family: var(--ff);
+  padding-left: 1.5rem;
+}
+
+.nav-link:hover {
+  color: var(--soft-red);
+}
+
+.main-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  background-color: var(--soft-red);
+  color: var(--off-white);
+  padding: 0.75rem 1.25rem;
+  font-size: 0.75rem;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2.5px;
+  margin-top: 1.75rem;
+}
+
+.btn:hover {
+  background-color: var(--very-dark-blue);
+}
+
+/* Side-news */
+
+.side-news {
+  background-color: var(--very-dark-blue);
+}
+
+.side-news h2 {
+  color: var(--soft-orange);
+  font-weight: 700;
+}
+
+.side-news h3 {
+  color: var(--off-white);
+  padding: 1.5rem 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.side-news h3:hover {
+  color: var(--soft-orange);
+  cursor: pointer;
+}
+
+.side-news p {
+  color: var(--grayish-blue);
+  padding-bottom: 1.5rem;
+}
+
+.p-text {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+  font-size: 0.688rem;
+  line-height: 1.75;
+}
+
+.digit {
+  color: var(--grayish-blue);
+  padding-bottom: 0.5rem;
+}
+
+.flex {
+  display: flex;
+  gap: 1.25rem;
+  padding-top: 2rem;
+}
+
+.flex-text h3 {
+  padding-bottom: 0.5rem;
+  /* font-size: 1.25rem; */
+}
+
+.flex-text h3:hover {
+  color: var(--soft-red);
+  cursor: pointer;
+}
+
+.flex-img img {
+  width: 7.5rem;
+  height: 100%;
+}
+
+@media (max-width: 33rem) {
+  .news-page {
+    width: min(95%, 70rem);
+    margin: 1rem;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main-img"
+      "big-headline"
+      "write-up"
+      "side-news"
+      "flex-1"
+      "flex-2"
+      "flex-3";
+  }
+
+  #nav-open-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    width: 2rem;
+    height: 1.5rem;
+    cursor: pointer;
+  }
+
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    z-index: 1;
+    transition: all 0.4s ease;
+  }
+
+  ul {
+    position: absolute;
+    top: 0;
+    right: 0%;
+    min-width: 60vw;
+    height: 100%;
+    background-color: hsl(0, 0%, 100%);
+    flex-direction: column;
+    padding-top: 10rem;
+    padding-left: 1rem;
+    gap: 1.5rem;
+  }
+
+  li,
+  a {
+    display: block;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    color: hsl(240, 100%, 5%);
+  }
+
+  #nav-close-btn {
+    display: flex;
+    position: absolute;
+    top: 1.5rem;
+    right: 3rem;
+    cursor: pointer;
+  }
+
+  .nav-bar.show {
+    right: 0;
+  }
+
+  .p-text {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  h3 {
+    font-weight: 800;
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 60rem) {
+  .news-page {
+    width: min(90%, 70rem);
+    margin: 1rem;
+  }
+}
